@@ -1,0 +1,95 @@
+body{
+    margin: 0;
+    counter-reset: ordered-list; /*set a counter called 'ordered-list' and its inital value to zero*/
+}
+
+.blueLayer{
+    background-color: #3A06CC; 
+    width: 100%;
+    height: 500px;
+    opacity: 0.8;
+    position: relative;
+    top: 0;
+}
+
+.blueLayer:hover{
+    opacity: 0.5;
+}
+
+.photoBanner{
+    width: 100%;
+    height: 500px;
+    background-image: url("https://i.ibb.co/KwDpWs2/18034.jpg");
+    background-color: black;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    top: 0;
+}
+
+h1{
+    position: relative;
+    text-align: center;
+    top: 50%;
+    font-size: 4rem;
+    font-family: 'Courgette', cursive;
+    color: white;
+    margin: 0 auto;
+}
+
+p{
+    margin-left: 10%;
+    margin-right: 10%;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+    font-size: 1.2rem;
+}
+
+figcaption, cite, footer{
+    margin-left: 10%;
+    margin-right: 10%;
+    font-family: 'Courgette', cursive;
+    font-size: 0.8rem;
+    color: grey;
+}
+
+blockquote p {
+    margin-left: 10%;
+    margin-right: 10%;
+    font-family: 'Courgette', cursive;
+    font-size: 1.7rem;
+    line-height: 1.5;
+    color: #3A06CC;
+}
+
+ol{
+    margin-left: 10%;
+    margin-right: 10%;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+    font-size: 1.2rem;
+    list-style: none;
+
+}
+
+/*insert styled number BEFORE the list item content*/
+ol li::before{
+    counter-increment: ordered-list; /*increment counter by 1*/
+    content: counter(ordered-list) ". ";
+    color: #3A06CC;
+    font-weight: bold;
+}
+
+footer cite{
+    margin: 0;
+}
+
+footer{
+    padding-bottom: 15%;
+  }
+
+a{
+    text-decoration: none;
+    color: #8155FF;
+}
